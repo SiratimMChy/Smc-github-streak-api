@@ -13,7 +13,7 @@ const headers = {
 };
 
 
-// 🔥 Fetch contribution data
+//  Fetch contribution data
 async function getContributionData() {
   try {
     const query = {
@@ -54,7 +54,7 @@ async function getContributionData() {
 }
 
 
-// 🔥 Calculate streak with accurate date tracking
+//  Calculate streak with accurate date tracking
 function calculateStreaks(weeks) {
   if (!weeks || weeks.length === 0) {
     return {
@@ -134,7 +134,7 @@ function calculateStreaks(weeks) {
 }
 
 
-// 🎨 Streak Card — pixel-perfect match to streak-stats.demolab.com tokyonight theme
+//  Streak Card — pixel-perfect match to streak-stats.demolab.com tokyonight theme
 app.get("/streak", async (req, res) => {
   try {
     const weeks = await getContributionData();
@@ -303,8 +303,8 @@ app.get("/", (req, res) => {
 
 app.get("/debug", (req, res) => {
   res.json({
-    token: TOKEN ? "✅ Set" : "❌ Missing",
-    username: USERNAME ? `✅ ${USERNAME}` : "❌ Missing"
+    token: TOKEN ? "Set" : "Missing",
+    username: USERNAME ? `${USERNAME}` : "Missing"
   });
 });
 
